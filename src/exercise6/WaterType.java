@@ -16,7 +16,7 @@ public class WaterType extends Monster{
     
     public WaterType(String name, int maxHP, int base){
         super(name, "water", "fire", "grass", maxHP, base);
-        atk = (int) (1.3*base);
-        def = (int) (0.7*base);
+        atk = (int) (0.7*base);
+        def = (int) (1.3*base);
     }       
 }

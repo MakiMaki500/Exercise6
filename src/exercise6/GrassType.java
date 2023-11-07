@@ -16,7 +16,7 @@ public class GrassType extends Monster{
     
     public GrassType(String name, int maxHP, int base){
         super(name, "grass", "water", "fire", maxHP, base);
-        atk = (int) (1.3*base);
-        def = (int) (0.7*base);
+        atk = base;
+        def = base;
     }
 }
