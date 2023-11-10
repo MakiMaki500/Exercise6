@@ -120,7 +120,7 @@ public class Monster {
     }
     public static void fight(Monster m1, Monster m2){
         while((m1.getHP())>0&&(m2.getHP()>0)){
-            if(m1.getHP()<m1.getMaxHP()) {
+            if(m1.getHP()<m1.getMaxHP()*0.5) {
                 m1.rest();
                 m2.charge();
                 m1.guard();
@@ -128,7 +128,7 @@ public class Monster {
             }else{
                 
             }
-            if(m2.getHP()<m2.getMaxHP()) {
+            if(m2.getHP()<m2.getMaxHP()*0.56) {
                 m2.rest();
                 m1.charge();
                 m2.guard();
@@ -139,11 +139,11 @@ public class Monster {
             }
         }
         if(m1.getHP()>0){
-            System.out.printf("%s has fainted!\n", m2);
+            System.out.printf("%s has fainted!\n", m2.getName());
             m1.gainXP(100);
         }
         if(m2.getHP()>0){
-            System.out.printf("%s has fainted!\n", m1);
+            System.out.printf("%s has fainted!\n", m1.getName());
             m2.gainXP(100);
         }
         m1.resetHealth();
