@@ -18,5 +18,12 @@ public class WaterType extends Monster{
         super(name, "water", "fire", "grass", maxHP, base);
         atk = (int) (0.7*base);
         def = (int) (1.3*base);
-    }       
+    }      
+    
+    @Override
+    public void special(){
+        super.special();
+        def +=2;
+        hp -= (maxHP*0.9);
+    }
 }

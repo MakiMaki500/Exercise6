@@ -19,4 +19,15 @@ public class GrassType extends Monster{
         atk = base;
         def = base;
     }
+    
+    @Override
+    public void special(){
+        super.special();
+        hp += (maxHP*0.2);
+    }
+    @Override
+    public void rest(){
+        super.rest();
+        hp+= (maxHP*0.5);
+    }
 }

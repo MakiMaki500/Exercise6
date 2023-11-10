@@ -19,4 +19,11 @@ public class FireType extends Monster{
         atk = (int) (1.3*base);
         def = (int) (0.7*base);
     }
+    
+    @Override
+    public void special(){
+        super.special();
+        atk+=2;
+        hp -= (maxHP*0.9);
+    }
 }

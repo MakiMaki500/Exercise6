@@ -14,7 +14,13 @@ public class Exercise6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        FireType slugma = new FireType("Slugma", 100, 30);
+        GrassType cherubi = new GrassType("Cherubi", 100, 30);
+        WaterType clawitzer = new WaterType("Clawitzer", 200, 80);
+        
+        Monster.fight(slugma, cherubi);
+        Monster.fight(clawitzer, cherubi);
+        Monster.fight(slugma, clawitzer);           
     }
     
 }

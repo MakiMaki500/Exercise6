@@ -118,5 +118,21 @@ public class Monster {
             System.out.println(name + " levelled up to " + lvl + "!");
         }
     }
+    public static void fight(Monster m1, Monster m2){
+        while((m1.getHP())>0&&(m2.getHP()>0)){
+            
+        }
+        if(m1.getHP()>0){
+            System.out.printf("%s has fainted!\n", m2);
+            m1.gainXP(100);
+        }
+        if(m2.getHP()>0){
+            System.out.printf("%s has fainted!\n", m1);
+            m2.gainXP(100);
+        }
+        m1.resetHealth();
+        m2.resetHealth();
+        System.out.println("ggwp");
+    }
 
 }
